@@ -1,0 +1,22 @@
+{
+  "name": "promar",
+  "version": "1.0.0",
+  "description": "promar website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzaloezemolina/promar.git"
+  },
+  "keywords": [
+    "turismo"
+  ],
+  "author": "Gonzalo Molina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzaloezemolina/promar/issues"
+  },
+  "homepage": "https://github.com/gonzaloezemolina/promar#readme"
+}
