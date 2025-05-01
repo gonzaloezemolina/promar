@@ -1,0 +1,21 @@
+.highlighted{
+    border-radius: 5px;
+    border: 0;
+    background-color: #263d7a;
+    font-family: "Aptos-R";
+    padding: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.borderon{
+    border-radius: 5px;
+    border: #263d7a 1px solid;
+    background-color: white;
+    font-family: "Aptos-R";
+    padding: 10px;
+    text-align: center;
+    color: #263d7a;
+    cursor: pointer;
+}

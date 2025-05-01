@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Aptos-R";
+    src: url("../font/aptos-regular.ttf");
+}
+
+@font-face {
+    font-family: "Aptos-I";
+    src: url("../font/aptos-italic.ttf");
+}
+
+@font-face {
+    font-family: "Aptos-L";
+    src: url("../../font/aptos-light.ttf");
+}
+
+@font-face {
+    font-family: "Aptos-BL";
+    src: url("../../font/aptos-black.ttf");
+}
+
+@font-face {
+    font-family: "Aptos-BLI";
+    src: url("../../font/aptos-black-italic.ttf");
+}
+
 body::-webkit-scrollbar{
     background: #263d7a;
     width: 12px;
