@@ -1,85 +1,30 @@
-.hero{
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+.banner_calabria{
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+              url("../media/img/calabria.jpg") no-repeat center center / cover;
+    object-fit: cover;
+    height: 95vh;
+    display: flex;
     justify-content: center;
-    justify-items: center;
-    background-image: url("../../media/img/background_map.png");
-    &_left{
-        border: 1px solid rgb(43, 255, 0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        &_text{
-            // border: 1px solid rgb(65, 15, 150);
-            margin-left: 38px;
-            p{
-                font-family: "Aptos-R";
-                font-size: 24px;
-                letter-spacing: 4px;
-            }
-            h1{
-                margin-top: 30px;
-                font-family: "Aptos-BLI";
-                font-size: 40px;
-            }
-        }
-        &_buttons{
-            font-family: "Aptos-R";
-            width: 90%;
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-        }
+    align-items:center;
+    text-align: center;
+    p{
+        font-family: "Aptos-I";
+        font-size: 20px;
+        margin-top: 5px;
+        color: white;
     }
-    &_right{
-        width: 100%;
-        border: 1px solid red;
+    h1{
+        font-family: "Aptos-BL";
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
-            width: 110%;
-            height: 70%;
-                animation: spin 40s linear infinite;
-                /* podés ajustar el tiempo: 20s, 10s, etc. */
-        }
+        font-size: 50px;
+        color: white;
     }
 }
 
-@keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
-  .second{
-    width: 100%;
-    height: 85vh;
-    &_text{
-        border: 1px solid red;
-        height: 35%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        h2{
-            font-family: "Aptos-BL";
-            font-size: 30px;
-            margin-bottom: 25px;
-        }
-    }
-  }
-
-//   Tercer seccion
-
-.third{
+.calabria_first{
     width: 100%;
     height: 85vh;
     display: grid;
@@ -87,7 +32,7 @@
     justify-items: center;
     align-items: center;
     // border: 1px solid rgb(238, 0, 255);
-    &_left{
+    &_right{
         // border: 1px solid red;
         display: flex;
         justify-content: center;
@@ -103,7 +48,7 @@
             }
         }
     }
-    &_right{
+    &_left{
         width: 100%;
         height: 100%;
         // border: 1px solid rgb(0, 102, 255);
@@ -158,7 +103,98 @@
 
 
 
-// quienes somos
+.calabria_first_card{
+    width: 100%;
+    height: 80vh;
+    border: 1px sandybrown solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_container{
+        width: 500px;
+        height:200px;
+        text-align: center;
+        background-color:#263d7a;
+        display:flex;
+        justify-content:center;
+        color: white;
+        align-items:center;
+        border-radius: 10px;
+        p{
+            font-family:"Aptos-R"
+        }
+        h3{
+            font-family:"Aptos-BL";
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.calabria_second_card{
+    width: 100%;
+    height: 80vh;
+    border: 1px sandybrown solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_container{
+        text-align: center;
+        width: 500px;
+        height:200px;
+        background-color: #263d7a;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color: white;
+        border-radius: 10px;
+        p{
+            font-family:"Aptos-R"
+        }
+        h3{
+            font-family:"Aptos-BL";
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.calabria_third_card{
+    width: 100%;
+    height: 80vh;
+    border: 1px sandybrown solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_container{
+        width: 500px;
+        color: white;
+        text-align: center;
+        height:200px;
+        background-color:#263d7a;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-radius: 10px;
+        p{
+            font-family:"Aptos-R"
+        }
+        h3{
+            font-family:"Aptos-BL";
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .quienes-somos {
@@ -234,42 +270,4 @@ position: relative;
 
 .decor-right {
     right: 0;
-}
-
-
-
-//   Quinta seccion
-
-.fifth{
-    width: 100%;
-    height: 65vh;
-    background-image: url("../../media/img/background_map.png");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &_container{
-        // border: 1px solid red;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 50%;
-        h5{
-            font-family: "Aptos-R";
-            font-weight: bold;
-            font-style: italic;
-            font-size: 30px;
-        }
-        &_btn{
-            width: 100%;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            // border: 1px solid red;
-            button{
-                width: 45%;
-            }
-        }
-    }
 }

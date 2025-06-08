@@ -6,6 +6,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 9999;
 }
 
 nav{
@@ -22,12 +24,27 @@ nav{
         }
         list-style: none;
     }
+    li{
+        position: relative;
+    }
 }
 
-// a:hover{
-//     transition: .5s;
-//     color: #1266a6;
-// }
+nav ul li::after,
+.nav_items ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li:hover::after,
+.nav_items ul li:hover::after {
+    width: 100%;
+}
 
 .nav_logo{
     border: 1px solid rebeccapurple;
@@ -54,4 +71,9 @@ nav{
     i{
         cursor: pointer;
     }
+}
+
+.nav_media i:hover{
+    transition: .5s;
+    color: rgb(190, 189, 189);
 }

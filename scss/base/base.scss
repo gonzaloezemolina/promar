@@ -41,3 +41,7 @@ body::-webkit-scrollbar-thumb{
 html {
     scroll-behavior: smooth;
   }
+
+::selection {
+  color: #1266a6; 
+}
