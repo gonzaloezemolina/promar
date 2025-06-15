@@ -10,12 +10,15 @@ header{
     z-index: 9999;
 }
 
+    .bi{
+        font-size: 1.2rem;
+    }
+
 nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    border: 1px saddlebrown solid;
     gap: 30%;
     ul{
         a{
@@ -47,7 +50,6 @@ nav ul li:hover::after,
 }
 
 .nav_logo{
-    border: 1px solid rebeccapurple;
     img{
         width: 70px;
         height: 70px;
@@ -63,6 +65,7 @@ nav ul li:hover::after,
 }
 
 .nav_media{
+    display: flex;
     gap: 15px;
     a{
         text-decoration: none;
@@ -76,4 +79,96 @@ nav ul li:hover::after,
 .nav_media i:hover{
     transition: .5s;
     color: rgb(190, 189, 189);
+}
+
+
+.nav_toggle {
+   display: none;
+  background: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 999;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+  .nav_toggle span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.nav_media_mobile{
+    display: none;
+        gap: 15px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    i{
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 768px){
+     .nav_items {
+    position: absolute;
+    top: 0;
+    right: -100%; /* ← Oculto hacia la derecha */
+    width: 60%; /* o 100% si lo querés ocupar todo */
+    height: 100vh;
+    // background-color: #263d7a;
+    background-color: #1266a6;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; 
+    align-items: center;
+    transition: all 0.4s ease;
+    z-index: 998;
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  .nav_items ul {
+    display: flex;
+    height: 45%;
+    width: 70%;
+    justify-content: center;
+    align-items:end;
+    flex-direction: column;
+  }
+
+  .nav_items.active {
+        right: 0; /* ← Se muestra desde la derecha */
+    opacity: 1;
+  }
+
+  .nav_media {
+  display: none;
+}
+
+.nav_media_mobile{
+     display: flex; /* ← Asegurate de que sea flex */
+  gap: 15px;
+  justify-content: end;
+    width: 70%;
+}
+
+  .nav_toggle{
+    display: flex;
+    border: none;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 0 20px;
+    margin: 0;
+  }
+
 }

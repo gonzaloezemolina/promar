@@ -273,3 +273,13 @@ position: relative;
         }
     }
 }
+
+
+
+@media(max-width:720px){
+    .hero_right{
+        img{
+            display: none;
+        }
+    }
+}

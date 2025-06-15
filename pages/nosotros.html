@@ -21,14 +21,18 @@
             <img src="../media/img/logo.png" alt="Logo de Promar" />
           </a>
         </div>
-        <div class="nav_items">
-          <ul>
-            <li><a href="../pages/calabria.html">CALABRIA</a></li>
-            <li><a href="../pages/nosotros.html">NOSOTROS</a></li>
-            <li><a href="../pages/contacto.html">CONTACTO</a></li>
-          </ul>
-        </div>
-        <div class="nav_media">
+            <button class="nav_toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+       <div class="nav_items" id="nav_items">
+         <ul>
+           <li><a href="../pages/calabria.html">CALABRIA</a></li>
+           <li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+           <li><a href="../pages/contacto.html">CONTACTO</a></li>
+         </ul>
+          <div class="nav_media_mobile">
           <a href="https://www.instagram.com/promarturismo/" target="_blank">
             <i class="bi bi-instagram"></i>
           </a>
@@ -36,6 +40,15 @@
             <i class="bi bi-facebook"></i>
           </a>
         </div>
+       </div>
+       <div class="nav_media">
+         <a href="https://www.instagram.com/promarturismo/" target="_blank">
+           <i class="bi bi-instagram"></i>
+         </a>
+         <a href="https://www.facebook.com/promar.turismo.7?locale=es_LA" target="_blank">
+           <i class="bi bi-facebook"></i>
+         </a>
+       </div>
       </nav>
     </header>
     <main>
@@ -62,8 +75,7 @@ En 1982, Saverio Procopio fue distinguido por el Gobierno de Italia con el títu
           </div>
         </div>
         <div class="nosotros_first_right">
-          <div class="nosotros_first_right_container" data-aos="fade-left" data-aos-offset="400"
-     data-aos-easing="ease-in-sine">
+          <div class="nosotros_first_right_container" data-aos="fade-right">
             <img src="../media/img/grupo_bandera.png" alt="Foto de Calabria">
           </div>
         </div>
@@ -92,19 +104,19 @@ En 1982, Saverio Procopio fue distinguido por el Gobierno de Italia con el títu
           </div>
         </div>
       </section>
-            <section class="calabria_first">
-        <div class="calabria_first_left">
-          <div class="calabria_first_left_text">
-            <div class="calabria_first_left_text_titles">
+            <section class="nosotros_first nosotros_vision">
+        <div class="nosotros_first_left">
+          <div class="nosotros_first_left_text">
+            <div class="nosotros_first_left_text_titles">
               <h3>VISIÓN</h3>
             </div>
-            <div class="calabria_first_left_text_paragraph">
+            <div class="nosotros_first_left_text_paragraph">
               <p>Nuestra visión es ser la agencia de turismo líder en Rosario, reconocida por nuestra innovación y excelencia en la planificación de viajes. Buscamos inspirar a las personas a explorar nuevos destinos, promoviendo el turismo responsable y sostenible, y convirtiéndonos en el referente de confianza para quienes desean vivir experiencias inolvidables.</p>
             </div>
           </div>
         </div>
-        <div class="calabria_first_right">
-          <div class="calabria_first_right_container" data-aos="fade-left">
+        <div class="nosotros_first_right" id="vision_container_image">
+          <div class="nosotros_first_right_container" data-aos="fade-right">
             <img src="../media/nosotros/ChatGPT Image 1 jun 2025, 15_28_23.png" alt="Foto de Calabria">
           </div>
         </div>
@@ -120,13 +132,31 @@ En 1982, Saverio Procopio fue distinguido por el Gobierno de Italia con el títu
             <div class="third_right_text_titles">
               <h3>VALORES</h3>
             </div>
-            <div class="third_right_text_paragraph">
-              <p>Seriedad: Actuamos con responsabilidad y compromiso en todas nuestras acciones, garantizando una relación de confianza con nuestros clientes.
-Solvencia: Contamos con la experiencia y los recursos necesarios para ofrecer soluciones efectivas y confiables en cada viaje.
-Calidad: Priorizamos la calidad en todos nuestros servicios, desde la atención al cliente hasta la selección de destinos y proveedores.
-Innovación: Buscamos constantemente nuevas formas de mejorar nuestros servicios y ofrecer experiencias únicas a nuestros viajeros.
-Humanidad: Valoramos el trato cercano y empático, entendiendo las necesidades de nuestros clientes y creando vínculos significativos en cada oportunidad.
+            <div class="third_right_text_paragraph_valores">
+              <div class="third_right_text_paragraph_valores_texto">
+                <h4>SERIEDAD</h4>
+                <p>Actuamos con responsabilidad y compromiso en todas nuestras acciones, garantizando una relación de confianza con nuestros clientes.</p>
+              </div>
+              <div class="third_right_text_paragraph_valores_texto">
+                <h4>SOLVENCIA</h4>
+                <p>Contamos con la experiencia y los recursos necesarios para ofrecer soluciones efectivas y confiables en cada viaje.
 </p>
+              </div>
+              <div class="third_right_text_paragraph_valores_texto">
+                <h4>CALIDAD</h4>
+                <p>Priorizamos la calidad en todos nuestros servicios, desde la atención al cliente hasta la selección de destinos y proveedores.
+</p>
+              </div>
+              <div class="third_right_text_paragraph_valores_texto">
+                <h4>INNOVACIÓN</h4>
+                <p>Buscamos constantemente nuevas formas de mejorar nuestros servicios y ofrecer experiencias únicas a nuestros viajeros.
+</p>
+              </div>
+              <div class="third_right_text_paragraph_valores_texto">
+                <h4>HUMANIDAD</h4>
+                <p>Valoramos el trato cercano y empático, entendiendo las necesidades de nuestros clientes y creando vínculos significativos en cada oportunidad.
+</p>
+              </div>
             </div>
           </div>
         </div>
@@ -189,5 +219,6 @@ Humanidad: Valoramos el trato cercano y empático, entendiendo las necesidades d
     <script>
   AOS.init();
 </script>
+<script src="../js/navbar.js"></script>
 </body>
 </html>
