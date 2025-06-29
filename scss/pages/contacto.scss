@@ -1,74 +1,26 @@
-.contact_title{
-    height: 35vh;
-    font-size: 30px;
-    font-family: "Aptos-BL";
-    display: flex;
-    justify-content: start;
-    align-items: end;
-    margin-left: 10%;
+.contact_title {
+  height: 35vh;
+  font-size: 30px;
+  font-family: "Aptos-BL";
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-left: 10%;
+  margin-bottom: 3%;
 }
 
-.contact_hero{
-    height: 85vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
-    border: 1px solid rgb(13, 188, 7);
-    .contact_left{
-        h2{
-            font-family: "Aptos-I";
-        }
-        font-family: "Aptos-R";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border: 1px solid rgb(7, 104, 188);
-        width: 100%;
-    }
-    .contact_right{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border: 1px solid red;
-        width: 100%;
-    }
-}
-
-.form_container{
-        border: 1px solid rgb(255, 0, 238);
-        height: 70%;
-        width: 55%;
-}
-
-form{
-        border: 1px solid red;
-       display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        textarea{
-            width: 100%;
-            height: 200px;
-        }
-        input{
-            width: 100%;
-        }
-}
-
-
-
-
-// a ver
 .contact_hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 0 5%;
-  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  height: 85vh;
+    // border: 1px solid rgb(234, 255, 0);
 
-  .contact_left, .contact_right {
+
+  .contact_left,
+  .contact_right {
+    // border: 1px solid rgb(0, 217, 255);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -77,64 +29,107 @@ form{
   }
 
   .contact_left {
-     border-right: 1px solid grey; 
-     padding-right: 30px;
-    form {
-      display: flex;
-      flex-direction: column;
+    height: 70%;
+    padding-left: 10%;
+    // border: 1px solid red;
+    justify-content: space-between;
+    h2 {
+      font-family: "Aptos-I";
+    }
+
+    &_text{
+    // border: 1px solid rgb(255, 0, 217);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    p{
+      padding-top: 10px;
+    }
+  }
+
+    .form_container {
+      height: 100%;
       width: 100%;
+    // border: 1px solid rgb(0, 255, 13);
 
-      input, textarea {
-        border: none;
-        border-bottom: 1px solid #2a397c;
-        margin: 10px 0;
-        font-family: inherit;
+      form {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-      }
 
-      textarea {
-        resize: none;
-        height: 150px;
+        input,
+        textarea {
+          border: none;
+          border-bottom: 1px solid #000000;
+          margin: 10px 0;
+          font-family: inherit;
+          outline: none;  
+          width: 100%;
+          margin-bottom: 20px
+        }
+
+        textarea {
+          resize: none;
+          height: 150px;
+        }
+
+        button.highlighted {
+          margin-top: 20px;
+          background-color: #2a397c;
+          color: white;
+          border: none;
+          padding: 10px 30px;
+          border-radius: 4px;
+          align-self: flex-end;
+        }
+        button{
+          width: 35%;
+        }
       }
     }
+  }
 
-    button.highlighted {
-      margin-top: 20px;
-      background-color: #2a397c;
-      color: white;
-      border: none;
-      padding: 10px 30px;
-      border-radius: 4px;
-      align-self: flex-end; // ✅ Alineado a la derecha
-    }
+  .contact_divider_container{
+    height: 100%;
+    display: flex;
+    align-items: start;
+    // border: 1px solid red;
+    padding: 0;
+  }
+  .contact_divider {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 40px;
+    height: 85%;
   }
 
   .contact_right {
     gap: 20px;
-
     h3 {
       font-family: "Aptos-BL";
       font-size: 18px;
     }
 
+    &_item{
+      margin-top: 5%;
+    }
     .contact_item {
       display: flex;
       align-items: center;
       gap: 10px;
 
-     
-        i {
-    background-color: #263d7a;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-  }
+      i {
+        background-color: #263d7a;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+      }
 
       p {
         margin: 0;
@@ -152,18 +147,18 @@ form{
           list-style: none;
 
           a {
-             i {
-          background-color: #263d7a;
-          color: white;
-          padding: 10px;
-          border-radius: 50%;
-          font-size: 1.2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 35px;
-          height: 35px;
-        }
+            i {
+              background-color: #263d7a;
+              color: white;
+              padding: 10px;
+              border-radius: 50%;
+              font-size: 1.2rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 35px;
+              height: 35px;
+            }
           }
         }
       }
@@ -171,36 +166,30 @@ form{
   }
 }
 
-
-
-
-
-
-.contact_maps{
-    border: 1px solid rgb(85, 0, 255);
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact_maps {
+  // border: 1px solid rgb(85, 0, 255);
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.maps_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 90%;
-    iframe{
-        height: 100%;
-        width: 100%;
-    }
+.maps_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  padding-left: 10%;
+  padding-right: 10%;
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
 }
-
-
 
 @media (max-width: 768px) {
   .contact_hero {
-    display: flex;
     flex-direction: column;
     padding: 0 8%;
 
@@ -210,11 +199,13 @@ form{
       margin-bottom: 30px;
     }
 
-    .contact_right {
-      .contact_right_social {
-        ul {
-          justify-content: flex-start;
-        }
+    .contact_divider {
+      display: none;
+    }
+
+    .contact_right_social {
+      ul {
+        justify-content: flex-start;
       }
     }
 

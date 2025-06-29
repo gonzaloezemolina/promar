@@ -101,9 +101,44 @@
     }
 }
 
+// .calabria_animation_wrapper {
+//   position: relative;
+// }
 
+// .plane {
+//   position: fixed;
+//   width: 40px;
+//   height: 40px;
+//   background-image: url('../media/img/airplane-fill.svg'); // avión en SVG
+//   background-size: cover;
+//   z-index: 10;
+//   top: 100px; // posición inicial, se modificará
+//   left: 20vw;
+//   transition: top 1s ease, left 1s ease, transform 1s ease;
+// }
+
+// .calabria_card {
+//   min-height: 100vh;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   padding: 40px;
+//   position: relative;
+//   // Las cards impares a la izquierda, pares a la derecha
+//   &:nth-child(odd) .calabria_card_container {
+//     margin-left: auto;
+//     margin-right: 5vw; // Derecha
+//   }
+
+//   &:nth-child(even) .calabria_card_container {
+//     margin-left: 5vw; // Izquierda
+//     margin-right: auto;
+//   }
+// }
 
 .calabria_first_card{
+      scroll-snap-align: start;
     width: 100%;
     height: 80vh;
     border: 1px sandybrown solid;
@@ -131,6 +166,8 @@
     }
 }
 .calabria_second_card{
+      scroll-snap-align: start;
+
     width: 100%;
     height: 80vh;
     border: 1px sandybrown solid;
@@ -158,6 +195,8 @@
     }
 }
 .calabria_third_card{
+      scroll-snap-align: start;
+
     width: 100%;
     height: 80vh;
     border: 1px sandybrown solid;
