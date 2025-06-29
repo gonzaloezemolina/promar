@@ -29,6 +29,10 @@
     src: url("../../font/aptos-black-italic.ttf");
 }
 
+a{
+    text-decoration: none;
+}
+
 body::-webkit-scrollbar{
     background: #263d7a;
     width: 12px;
