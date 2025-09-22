@@ -225,9 +225,9 @@
 }
 
 
-
-
-
+.calabria_first_card_container:hover{transform: scale(1.1);transition: 2s;}
+.calabria_second_card_container:hover{transform: scale(1.1);transition: 2s;}
+.calabria_third_card_container:hover{transform: scale(1.1);transition: 2s;}
 
 
 
@@ -298,15 +298,6 @@ position: relative;
   width: 60px;
   height: 200px;
   background-color: #273c85;
-  border-radius: 12px;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.decor-left {
-  left: 0;
-}
-
-.decor-right {
-    right: 0;
 }

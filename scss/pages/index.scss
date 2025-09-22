@@ -33,7 +33,8 @@
             }
             h1{
                 margin-top: 30px;
-                font-family: "Aptos-BLI";
+                font-family: "Aptos-I";
+                font-weight: bold;
                 font-size: 40px;
             }
         }
@@ -51,10 +52,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+         overflow: hidden; 
         img{
             width: 110%;
             height: 70%;
+            margin-top: 50px;
                 animation: spin 40s linear infinite;
+                transform-origin: center center;
                 /* podés ajustar el tiempo: 20s, 10s, etc. */
         }
     }
@@ -293,11 +297,11 @@
             }
         }
         &_button{
-            width: 60%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            button{
+            a{
                 width: 100%;
             }
         }
@@ -350,20 +354,8 @@ position: relative;
   line-height: 1.6;
 }
 
-.boton {
-      font-family: "Aptos-R";
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  background-color: #273c85;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.boton:hover {
-  background-color: #1f2f6c;
+#sobre-nosotros{
+      width: 80%;
 }
 
 .decor {
@@ -371,17 +363,18 @@ position: relative;
   width: 60px;
   height: 200px;
   background-color: #273c85;
-  border-radius: 12px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .decor-left {
   left: 0;
+   border-radius: 0 12px 12px 0;
 }
 
 .decor-right {
     right: 0;
+    border-radius: 12px 0 0 12px;
 }
 
 
@@ -413,21 +406,41 @@ position: relative;
             width: 100%;
             margin-top: 20px;
             display: flex;
-            justify-content: space-between;
-            // border: 1px solid red;
-            button{
-                width: 45%;
-            }
+            justify-content: center;
+            height: 35px;
+            gap: 25px;
         }
     }
 }
 
+.fifth_container_btn a {
+  flex: 1;              // cada <a> ocupa lo mismo
+  display: flex;        // hace que el button se centre
+}
 
+.fifth_container_btn button {
+  width: 100%;          // el botón llena todo el <a>
+  height: 100%;
+}
 
-@media(max-width:720px){
-    .hero_right{
-        img{
-            display: none;
+@media(max-width:500px){
+    .hero{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &_left{
+        margin-top: 10%;
+        &_text{
+          text-align: center;
+          margin: 0;
         }
+      }
+      &_right{
+        border: 1px solid red;
+        img{
+          flex: 1;
+        }
+      }
     }
 }
