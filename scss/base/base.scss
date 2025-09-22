@@ -49,3 +49,14 @@ html {
 ::selection {
   color: #1266a6; 
 }
+
+
+@media(max-width:500px){
+    .decor-left {
+  display: none;
+}
+
+.decor-right {
+    display: none;
+}
+}
