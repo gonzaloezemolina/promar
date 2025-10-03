@@ -1,17 +1,22 @@
-// const plane = document.getElementById('plane');
-// const cards = document.querySelectorAll('.calabria_card');
+  gsap.registerPlugin(MotionPathPlugin);
+  const obtainAirplane = document.getElementById("airplane1");
+  obtainAirplane.style.rotate = '40deg'
 
-// window.addEventListener('scroll', () => {
-//   cards.forEach((card, index) => {
-//     const rect = card.getBoundingClientRect();
-//     if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
-//       // Cambiar posición del avión según index
-//       const newTop = rect.top + window.scrollY + rect.height / 2;
-//       const newLeft = index % 2 === 0 ? '20vw' : '70vw'; // alterna lado
-//       plane.style.top = `${newTop}px`;
-//       plane.style.left = newLeft;
-//       plane.style.transform = `rotate(${index % 2 === 0 ? '45deg' : '-45deg'})`;
-//     }
-//   });
+//   gsap.set("#airplane", {
+//   motionPath: {
+//     path: "#flightPath",
+//     align: "#flightPath",
+//     alignOrigin: [0.5, 0.5],
+//   }
 // });
 
+  // Dejar el avión en la posición final del path (100%)
+gsap.set("#airplane1", {  // Cambié #airplane por #airplane1
+  motionPath: {
+    path: "#flightPath1",
+    align: "#flightPath1",
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true,  // IMPORTANTE: esto rota el avión según la dirección del path
+    end: 1  // 1 = final del path (100%)
+  }
+});

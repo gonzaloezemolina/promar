@@ -16,21 +16,32 @@
   const obtainAirplane = document.getElementById("airplane");
   obtainAirplane.style.rotate = '40deg'
 
-  gsap.set("#airplane", {
+//   gsap.set("#airplane", {
+//   motionPath: {
+//     path: "#flightPath",
+//     align: "#flightPath",
+//     alignOrigin: [0.5, 0.5],
+//   }
+// });
+
+  // gsap.to("#airplane", {
+  //   duration: 5,
+  //   ease: "power1.inOut",
+  //   rotate: 45,
+  //   motionPath: {
+  //     path: "#flightPath",
+  //     align: "#flightPath",
+  //     alignOrigin: [0.5, 0.5]
+  //   }
+  // });
+
+  // Dejar el avión en la posición final del path (100%)
+gsap.set("#airplane", {
   motionPath: {
     path: "#flightPath",
     align: "#flightPath",
     alignOrigin: [0.5, 0.5],
-  }
+    end: 1 // indica el final del path
+  },
+  rotate: 45 // opcional: ajuste fino de la inclinación final
 });
-
-  gsap.to("#airplane", {
-    duration: 5,
-    ease: "power1.inOut",
-    rotate: 45,
-    motionPath: {
-      path: "#flightPath",
-      align: "#flightPath",
-      alignOrigin: [0.5, 0.5]
-    }
-  });
