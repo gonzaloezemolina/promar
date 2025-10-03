@@ -137,17 +137,34 @@
 //   }
 // }
 
+.calabria_scroll_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.airplane_path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; // Se estira a toda la altura del wrapper
+  pointer-events: none;
+  z-index: 1;
+}
+
 .calabria_first_card{
       scroll-snap-align: start;
     width: 100%;
     height: 80vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     &_container{
         width: 500px;
+        z-index: 999;
         height:200px;
+        transform: translateX(600px);
         text-align: center;
         background-color:#263d7a;
         display:flex;
@@ -170,12 +187,13 @@
 
     width: 100%;
     height: 80vh;
-    border: 1px sandybrown solid;
     display: flex;
     justify-content: center;
     align-items: center;
     &_container{
         text-align: center;
+        z-index: 999;
+        transform: translateX(-100px);
         width: 500px;
         height:200px;
         background-color: #263d7a;
@@ -199,11 +217,12 @@
 
     width: 100%;
     height: 80vh;
-    border: 1px sandybrown solid;
     display: flex;
     justify-content: center;
     align-items: center;
     &_container{
+        transform: translateX(200px);
+        z-index: 999;
         width: 500px;
         color: white;
         text-align: center;
@@ -225,9 +244,23 @@
 }
 
 
-.calabria_first_card_container:hover{transform: scale(1.1);transition: 2s;}
-.calabria_second_card_container:hover{transform: scale(1.1);transition: 2s;}
-.calabria_third_card_container:hover{transform: scale(1.1);transition: 2s;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .calabria_first_card_container:hover{transform: scale(1.1);transition: 2s;}
+// .calabria_second_card_container:hover{transform: scale(1.1);transition: 2s;}
+// .calabria_third_card_container:hover{transform: scale(1.1);transition: 2s;}
 
 
 
