@@ -42,7 +42,7 @@
         height: 100%;
         &_container{
         width: 70%;
-        height: 75%;
+        height: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,8 +53,8 @@
              border-radius: 30px;
             }
             img{
-             width: 100%;
-             height: 100%;
+             width: 80%;
+             height: 80%;
              border-radius: 30px;
             }
         }
@@ -260,6 +260,7 @@
 }
 
 
+
 @media (max-width: 768px) {
     .nosotros_first{
         width: 100%;
@@ -268,49 +269,175 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        h3{
-            font-size: 20px;
-            margin-top: 20px;
+        padding: 20px; // ← AGREGAR padding al contenedor
+        
+        &_left {
+            width: 100%; // ← AGREGAR
+            padding: 0; // ← AGREGAR
+            
+            &_text {
+                width: 100%; // ← AGREGAR
+                
+                &_titles {
+                    width: 100%; // ← Sobrescribir el 60% de desktop
+                    h3 {
+                        font-size: 30px; // ← Aumentar tamaño
+                    }
+                }
+                
+                &_paragraph {
+                    width: 100%; // ← Sobrescribir el 60% de desktop
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+            &_button {
+                width: 100%; // ← Sobrescribir el 60% de desktop
+            }
         }
-        p{
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        &_right_container{
-            video{
-             width: 100%;
-             height: 100%;
-             object-fit: cover;
-             border-radius: 30px;
+        
+        &_right {
+            width: 100%; // ← AGREGAR
+            padding: 20px 0; // ← AGREGAR
+            
+            &_container:has(video) {
+                width: 100%; // ← Sobrescribir el 70% de desktop
+                height: 470px; // ← AGREGAR
+                
+                video{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; 
+                    border-radius: 10px;
+                }
+                img{
+                    width: 50%;
+             height: 50%;
+                }
             }
         }
     }
-    .nosotros-cut{
+    
+    .nosotros-cut {
         text-align: center;
-        padding: 0;
-        h3{
-            font-size: 28px;
+        padding: 40px 20px; // ← AGREGAR padding lateral
+        height: auto; // ← Cambiar de 60vh a auto
+        
+        h3 {
+            width: 100%; // ← Sobrescribir el 45% de desktop
+            font-size: 24px; // ← Ajustar tamaño
             font-family: "Aptos-I";
             font-weight: bold;
         }
     }
-      .nosotros_vision {
-    flex-direction: column-reverse;
-  }
-    .third{
+    
+    .nosotros_vision {
+        flex-direction: column-reverse;
+    }
+    
+    .third {
         width: 100%;
         height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        h3{
-            font-size: 20px;
-            margin-top: 20px;
+        padding-right: 20px; // ← AGREGAR
+        padding-left: 20px; // ← AGREGAR
+    margin: 0;
+        
+        &_left {
+            width: 100%; // ← AGREGAR
+            
+            &_container {
+                width: 100%; // ← Sobrescribir el 70% de desktop
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 20px;
+                }
+            }
         }
-        p{
-            font-size: 18px;
-            margin-bottom: 20px;
+        
+        &_right {
+            width: 100%; // ← AGREGAR
+            
+            &_text {
+                width: 100%; // ← AGREGAR
+                
+                &_titles {
+                    width: 100%; // ← Sobrescribir el 60% de desktop
+                    h3 {
+                        font-size: 30px; // ← Aumentar tamaño
+                    }
+                }
+                
+                &_paragraph {
+                    width: 100%; // ← Sobrescribir el 60% de desktop
+                    p {
+                        font-size: 23px;
+                    }
+                }
+                
+                &_paragraph_valores {
+                    width: 100%; // ← AGREGAR
+                    padding: 10px; // ← Reducir padding
+                    
+                    ul {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+            
+            &_button {
+                width: 100%; // ← Sobrescribir el 60% de desktop
+            }
         }
+    }
+}
+
+@media (max-width: 430px) {
+    .nosotros_first_left_text {
+        width: 100%; // ← Cambiar de 90% a 100%
+        
+        &_titles {
+            width: 100%; // ← AGREGAR
+            h3 {
+                font-size: 30px; // ← Ajustar
+            }
+        }
+        
+        &_paragraph {
+            width: 100%; // ← AGREGAR
+            p {
+                font-size: 19px; // ← Ajustar para pantallas muy pequeñas
+            }
+        }
+    }
+    
+    .third_right_text {
+        &_titles {
+            width: 100%; // ← AGREGAR
+            h3 {
+                font-size: 30px;
+            }
+        }
+        
+        &_paragraph {
+            width: 100%; // ← AGREGAR
+            p {
+                font-size: 19px;
+            }
+        }
+    }
+    
+    .nosotros-cut h3 {
+        font-size: 30px; // ← Reducir más para móviles pequeños
     }
 }
