@@ -192,11 +192,14 @@
   .contact_hero {
     flex-direction: column;
     padding: 0 8%;
-
+     height: auto;
+    min-height: 85vh;
     .contact_left,
     .contact_right {
-      width: 100%;
+    // border: 1px solid red;
+      width: 90%;
       margin-bottom: 30px;
+      padding-left: 0;
     }
 
     .contact_divider {
@@ -223,21 +226,55 @@
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .contact_title{
-    height: 60%;
+    height: 80%;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: start;
   }
   .contact_hero{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 0;
     margin: 0;
   }
   .contact_left{
-    width: 100%;
+    // border: 1px solid rgb(6, 0, 128);
     margin: 0;
     padding: 0;
+    transform: 0;
+    .form_container{
+    // border: 1px solid green;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+      form{
+        margin: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  .contact_container{
+    width: 100%;
+    // border: 1px solid red;
+  }
+  .contact_right{
+    width: 90%;
+    // border: 1px solid rgb(0, 255, 208);
+    margin: 0;
+    padding: 0;
+  }
+  .maps_container{
+    transform: 0;
+    margin:0;
+    padding: 0;
+    iframe{
+      height: 100%;
+      width: 90%;
+    }
   }
 }
