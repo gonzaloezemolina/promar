@@ -53,6 +53,9 @@
         justify-content: center;
         align-items: center;
          overflow: hidden; 
+         #mundo_mobile{
+          display: none;
+         }
         img{
             width: 110%;
             height: 70%;
@@ -432,18 +435,30 @@ position: relative;
       height: auto;
       min-height: 100vh;
       padding: 20px;
-      border: 1px solid blue;
+      padding-top: 130px; // ← AGREGAR: espacio para el navbar
+      overflow: hidden;
       &_left{
-        margin-top: 10%;
+         margin-top: 0;
         &_text{
           text-align: center;
           margin: 0;
           p{
-            font-size: 20px;
+            font-size: 16px;
           }
           h1{
-            margin-top: 5px;
-            font-size: 30px;
+            margin-top: 15px;
+            font-size: 26px;
+          }
+        }
+        &_buttons{
+          width: 100%;
+          margin-top: 25px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          
+          a {
+            width: 100%;
           }
         }
       }
@@ -452,21 +467,24 @@ position: relative;
       }
       &_right{
         width: 100%;
-        height: 100%;
+         height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: visible;
-        border: 1px solid red;
+          overflow: visible; 
         transform: none;
-        img{
-        transform: none;
-          border: 1px solid blue;
+        #mundo_desktop{
+          display: none;
+        }
+        #mundo_mobile{
+                 display: block;
           width: 100%;
           height: 100%;
-          max-width: 400px;
+          max-width: 350px; // ← Limitar ancho máximo
+          max-height: 350px; // ← Limitar altura máxima
           object-fit: contain;
           animation: spin 40s linear infinite;
+          transform-origin: center center;
         }
       }
     }
@@ -552,18 +570,22 @@ position: relative;
       margin-top: 0;
       gap: 30px;
       
+      #calabria_home{
+        order: 2;
+      }
       &_left {
         width: 100%;
         height: auto;
-        order: 2;
-        
         &_container {
           width: 100%;
-          height: auto;
-          
+          height: 400px;
+          padding: 0 !important;
+          overflow: hidden; 
           img {
-            width: 100%;
-            height: auto;
+            width: 100% !important;
+            height: 100%;
+            padding: 0%;
+            margin: 0;
             max-height: 400px;
             object-fit: cover;
             border-radius: 20px;
